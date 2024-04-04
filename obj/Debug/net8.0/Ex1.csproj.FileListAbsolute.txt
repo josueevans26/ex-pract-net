@@ -76,3 +76,4 @@ C:\Users\joshu\OneDrive\Documentos\examen-asp-sql\Ex1\bin\Debug\net8.0\Irony.dll
 C:\Users\joshu\OneDrive\Documentos\examen-asp-sql\Ex1\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\joshu\OneDrive\Documentos\examen-asp-sql\Ex1\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\Users\joshu\OneDrive\Documentos\examen-asp-sql\Ex1\bin\Debug\net8.0\XLParser.dll
+C:\Users\joshu\OneDrive\Documentos\examen-asp-sql\Ex1\obj\Debug\net8.0\Ex1.sourcelink.json

@@ -43,7 +43,7 @@ namespace Ex1.Controllers
             foreach (var encuesta in encuestas)
             {
                 dataTable.Rows.Add(encuesta.Id, encuesta.Respuesta1, encuesta.Respuesta2, encuesta.Respuesta3,
-                    encuesta.Respuesta4, encuesta.Respuesta5, encuesta.Respuesta6, encuesta.Respuesta7, encuesta.Respuesta8);
+                    encuesta.Respuesta4, encuesta.Respuesta5, encuesta.Respuesta5_1, encuesta.Respuesta5_2 , encuesta.Respuesta6, encuesta.Respuesta7, encuesta.Respuesta8);
             }
 
             // 3. Exportar los datos a Excel
