@@ -1,0 +1,209 @@
+@model Ex1.Models.Encuestas
+
+<h1>Encuesta</h1>
+
+<form asp-action="Create" method="post">
+    <h2>Sección 1</h2>
+    <p>1. Contestaré esta encuesta respecto a la experiencia de la empresa que represento:</p>
+    <div class="form-group">
+        <input type="radio" asp-for="Respuesta1" value="Acepto" required/> Acepto <br>
+        <input type="radio" asp-for="Respuesta1" value="No acepto" /> No acepto <br>
+    </div>
+    <br>
+    
+    <div id="seccion1-1" class="seccion" style="display: none;">
+        <p>2. ¿A qué sector se dedica la empresa?</p>
+        <div class="form-group">
+            <input type="radio" asp-for="Respuesta2" value="A"/> Agricultura, cría y explotación de animales, aprovechamiento forestal, pesca y caza <br>
+            <input type="radio" asp-for="Respuesta2" value="B" /> Minería <br>
+            <input type="radio" asp-for="Respuesta2" value="C" /> Generación, transmisión, distribución y comercialización de energía eléctrica, suministro de agua y de gas natural por ductos al consumidor final <br>
+            <input type="radio" asp-for="Respuesta2" value="D" /> Construcción <br>
+            <input type="radio" asp-for="Respuesta2" value="E" /> Industrias manufactureras <br>
+            <input type="radio" asp-for="Respuesta2" value="F" /> Comercio al por mayor <br>
+            <input type="radio" asp-for="Respuesta2" value="G" /> Comercio al por menor <br>
+            <input type="radio" asp-for="Respuesta2" value="H" /> Transportes, correos y almacenamiento <br>
+            <input type="radio" asp-for="Respuesta2" value="I" /> Información en medios masivos <br>
+            <input type="radio" asp-for="Respuesta2" value="J" /> Servicios financieros y de seguros <br>
+            <input type="radio" asp-for="Respuesta2" value="K" /> Servicios inmobiliarios y de alquiler de bienes muebles e intangibles <br>
+            <input type="radio" asp-for="Respuesta2" value="L" /> Servicios profesionales, científicos y técnicos <br>
+            <input type="radio" asp-for="Respuesta2" value="M" /> Corporativos <br>
+            <input type="radio" asp-for="Respuesta2" value="N" /> Servicios de apoyo a los negocios y manejo de residuos y desechos <br>
+            <input type="radio" asp-for="Respuesta2" value="O" /> Servicios educativos <br>
+            <input type="radio" asp-for="Respuesta2" value="P" /> Servicios de salud y de asistencia social <br>
+            <input type="radio" asp-for="Respuesta2" value="Q" /> Servicios de esparcimiento culturales y deportivos, y otros servicios recreativos <br>
+            <input type="radio" asp-for="Respuesta2" value="R" /> Servicios de alojamiento temporal y de preparación de alimentos y bebidas <br>
+            <input type="radio" asp-for="Respuesta2" value="S" /> Otros servicios excepto actividades gubernamentales <br>
+        </div>
+        <br>
+        <p>3. Número de empleados:</p>
+        <div class="form-group">
+            <input type="radio" asp-for="Respuesta3" value="1 a 10"/> 1 a 10 <br>
+            <input type="radio" asp-for="Respuesta3" value="11 a 50" /> 11 a 50 <br>
+            <input type="radio" asp-for="Respuesta3" value="51 a 250" /> 51 a 250 <br>
+            <input type="radio" asp-for="Respuesta3" value="251 o más" /> 251 o más <br>
+        </div>
+        <br>
+        <p>4. ¿Este año habrá entrega de reparto de utilidades?</p>
+        <div class="form-group">
+            <input type="radio" asp-for="Respuesta4" value="SI"/> Sí <br>
+            <input type="radio" asp-for="Respuesta4" value="NO" /> No <br>
+        </div>
+    </div>
+
+    
+
+    <div id="seccion2" class="seccion" style="display: none;">
+        <h2>Sección 2</h2>
+        <p>5. En comparación con el año anterior ¿Cómo será el monto repartido de PTU? </p> 
+        <div class="form-group">
+            <input type="radio" asp-for="Respuesta5" value="Mayor" /> Mayor <br>
+            <input type="radio" asp-for="Respuesta5" value="Igual" /> Igual <br>
+            <input type="radio" asp-for="Respuesta5" value="Menor" /> Menor <br>   
+        </div>     
+    </div>
+
+    <div id="seccion2-1" class="seccion" style="display: none;">
+        <br>
+        <p>5.1 ¿Cuáles fueron las razones por las que el monto de reparto de utilidades fue mayor? <span>(Selección múltiple)</span></p>
+        <div class="form-group">
+            <input type="checkbox" name="checkboxRespuestas51" value="A"/> Aumento en la productividad de las y los colaboradores<br>
+            <input type="checkbox" name="checkboxRespuestas51" value="B" /> Aumento en las ventas<br>
+            <input type="checkbox" name="checkboxRespuestas51" value="C" /> Entorno económico favorable<br>
+            <input type="checkbox" name="checkboxRespuestas51" value="D" /> Nuevas oportunidades de negocio<br>
+        </div>
+    </div>
+
+    <div id="seccion2-2" class="seccion" style="display: none;">
+        <br>
+        <p>5.2 ¿Cuáles fueron las razones por las que habrá menor reparto de utilidades? <span>(Selección múltiple)</span></p>
+        <div class="form-group">
+            <input type="checkbox" name="checkboxRespuestas52" value="A"/> Disminución en la productividad de las y los colaboradores<br>
+            <input type="checkbox" name="checkboxRespuestas52" value="B" /> Afectaciones por inseguridad<br>
+            <input type="checkbox" name="checkboxRespuestas52" value="C" /> Afectaciones por el entorno político y económico<br>
+            <input type="checkbox" name="checkboxRespuestas52" value="D" /> Continuación de la pandemia COVID-19<br>
+            <input type="checkbox" name="checkboxRespuestas52" value="E" /> Problemas para mejorar la innovación y los procesos al interior de la empresa<br>
+            <input type="checkbox" name="checkboxRespuestas52" value="F" /> Otros<br>
+        </div>
+    </div>
+
+    <div id="seccion2-3" class="seccion" style="display: none;">
+        <br>
+        <div class="form-group">
+        <p>6. Días de salario estimado a pagar por PTU ejercicio 2021</p>
+            <input asp-for="Respuesta6" type="number" min="0" max="100" value="1" />
+        </div>
+    </div>
+
+    <div id="seccion3" class="seccion" style="display: none;">
+        <h2>Sección 3</h2>
+        <div class="form-group">
+            <p>7. ¿Cuáles fueron las razones por las que no hubo reparto de utilidades? <span>(Selección múltiple)</span></p>
+            <input type="checkbox" name="checkboxRespuestas7" value="A"/> Disminución en la productividad de las y los colaboradores<br>
+            <input type="checkbox" name="checkboxRespuestas7" value="B" /> Afectaciones por inseguridad<br>
+            <input type="checkbox" name="checkboxRespuestas7" value="C" /> Afectaciones por el entorno político y económico<br>
+            <input type="checkbox" name="checkboxRespuestas7" value="D" /> Continuación de la pandemia COVID-19<br>
+            <input type="checkbox" name="checkboxRespuestas7" value="E" /> Problemas para mejorar la innovación y los procesos al interior de la empresa<br>
+            <input type="checkbox" name="checkboxRespuestas7" value="F" /> Complicaciones por la inflación<br>
+        </div>
+        <br>
+        <div class="form-group">
+            <p>8. El año anterior, ¿hubo reparto de PTU?</p>
+            <input type="radio" asp-for="Respuesta8" value="SI"/> Sí <br>
+            <input type="radio" asp-for="Respuesta8" value="NO" /> No <br>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("input[name='Respuesta1']").change(function () {
+                if ($("input[name='Respuesta1']:checked").val() == "Acepto") {
+                    $(".seccion").hide();
+                    $("#seccion1-1").show();   
+                }else{
+                    $(".seccion").hide();
+                    $("#seccion1-1").hide();
+                }
+                limpiarTodoExceptoSeccion("seccion1");
+            });
+
+            $("input[name='Respuesta4']").change(function () {
+                if ($("input[name='Respuesta4']:checked").val() == "SI") {
+                    $("#seccion2").show();
+                    $("#seccion3").hide();
+                    limpiarSeccion("seccion3");
+                }
+                else {
+                    $("#seccion3").show();
+                    $("#seccion2").hide();
+                    $("#seccion2-1").hide();
+                    $("#seccion2-2").hide();
+                    $("#seccion2-3").hide();
+                    limpiarSeccion("seccion2");
+                    limpiarSeccion("seccion2-1");
+                    limpiarSeccion("seccion2-2");
+                    limpiarSeccion("seccion2-3");
+                }
+            });
+
+            $("input[name='Respuesta5']").change(function () {
+                if ($("input[name='Respuesta5']:checked").val() == "Mayor") {
+                    $("#seccion2-1").show();
+                    $("#seccion2-2").hide();
+                    $("#seccion2-3").hide();
+                    limpiarSeccion("seccion2-2");
+                    limpiarSeccion("seccion2-3");
+                }
+                else if ($("input[name='Respuesta5']:checked").val() == "Menor") {
+                    $("#seccion2-2").show();
+                    $("#seccion2-1").hide();
+                    $("#seccion2-3").hide();
+                    limpiarSeccion("seccion2-1");
+                    limpiarSeccion("seccion2-3");
+                }
+                else {
+                    $("#seccion2-3").show();
+                    $("#seccion2-1").hide();
+                    $("#seccion2-2").hide();
+                    limpiarSeccion("seccion2-1");
+                    limpiarSeccion("seccion2-2");
+                }
+            });
+        });
+
+        function limpiarSeccion(seccionId) {
+            // Obtener la referencia a la sección
+            var seccion = document.getElementById(seccionId);
+            
+            // Obtener todos los checkboxes y radio buttons dentro de la sección
+            var inputs = seccion.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+            
+            // Iterar sobre los checkboxes y radio buttons y deseleccionarlos
+            inputs.forEach(function(input) {
+                input.checked = false;
+            });
+        }
+
+        function limpiarTodoExceptoSeccion(seccionId) {
+            // Obtener todas las secciones
+            var secciones = document.querySelectorAll('.seccion');
+            
+            // Iterar sobre cada sección
+            secciones.forEach(function(seccion) {
+                // Verificar si la sección es diferente a la sección específica
+                if (seccion.id !== seccionId) {
+                    // Obtener todos los checkboxes y radio buttons dentro de la sección
+                    var inputs = seccion.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+                    
+                    // Iterar sobre los checkboxes y radio buttons y deseleccionarlos
+                    inputs.forEach(function(input) {
+                        input.checked = false;
+                    });
+                }
+            });
+        }
+    </script>
+}

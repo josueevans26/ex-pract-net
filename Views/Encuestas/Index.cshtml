@@ -1,0 +1,41 @@
+@model List<Ex1.Models.Encuestas>
+
+<a asp-action="Create" class="btn btn-primary">Crear Encuesta</a>
+
+<button type="button" onclick="location.href='@Url.Action("ExportarEncuestasToExcel", "Export")'" class="btn btn-success">Exportar a Excel</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Respuesta 1 </th>
+            <th> Respuesta 2 </th>
+            <th> Respuesta 3 </th>
+            <th> Respuesta 4 </th>
+            <th> Respuesta 5 </th>
+            <th> Respuesta 5_1 </th>
+            <th> Respuesta 5_2 </th>
+            <th> Respuesta 6 </th>
+            <th> Respuesta 7 </th>
+            <th> Respuesta 8 </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var encuesta in Model)
+        {
+            <tr>
+                <td> @encuesta.Id </td>
+                <td> @encuesta.Respuesta1 </td>
+                <td> @encuesta.Respuesta2 </td>
+                <td> @encuesta.Respuesta3 </td>
+                <td> @encuesta.Respuesta4 </td>
+                <td> @encuesta.Respuesta5 </td>
+                <td> @encuesta.Respuesta5_1 </td>
+                <td> @encuesta.Respuesta5_2 </td>
+                <td> @encuesta.Respuesta6 </td>
+                <td> @encuesta.Respuesta7 </td>
+                <td> @encuesta.Respuesta8 </td>
+            </tr>
+        }
+    </tbody>
+</table>
